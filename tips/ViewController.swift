@@ -50,16 +50,9 @@ class ViewController: UIViewController {
         var tipPercentages = [0.18, 0.2, 0.22]
         
         var tipPercentage = tipPercentages[tipControl.selectedSegmentIndex]
-        
-        
         var billAmount = NSString(string: billField.text!).doubleValue
-        var number = SettingsViewController.getNumber
-        
-        let defaults = NSUserDefaults.standardUserDefaults()
-        let intValue = defaults.integerForKey("number")
-        
-        var tip = (billAmount * tipPercentage)/number
-        var total = (billAmount + tip)number
+        var tip = (billAmount * tipPercentage)
+        var total = (billAmount + tip)
         
         tipLabel.text = "$\(tip)"
         totalLabel.text = "$\(total)"
@@ -72,4 +65,3 @@ class ViewController: UIViewController {
         view.endEditing(true)
     }
 }
-

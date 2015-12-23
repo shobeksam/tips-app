@@ -13,21 +13,12 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var numberOf: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        let defaults = NSUserDefaults.standardUserDefaults()
-        
-        defaults.synchronize()
-        number = NSString(string: numberOf.text!).doubleValue
-        print(number)
         // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    func getNumber() -> Double{
-        return number
     }
     
 
